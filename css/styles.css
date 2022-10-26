@@ -213,6 +213,7 @@ border-radius: 2px;
   
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  border-color: transparent;
 
   font-family: inherit;
   font-weight: 700;
@@ -318,6 +319,10 @@ padding-top: 18px;
 margin-bottom: 10px;
 }
 
+.field-inner {
+  position:relative
+}
+
 .field {
   padding-left: 42px;
   width: 448px;
@@ -340,8 +345,9 @@ letter-spacing: 0.01em;
 
 .form-icon {
   position: absolute;
-  bottom: 11px;
+  top: 50%;
   left: 12px;
+  transform: translateY(-50%);
 
   width: 18px;
   height: 18px;
@@ -410,6 +416,12 @@ color: rgba(117, 117, 117, 0.5);
   color: var(--primary-white-color);
   fill: transparent;
 
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+input[type="checkbox"]:focus + .checkbox-icon {
+  border-color: var(--accent-color);
 }
 
 input[type="checkbox"]:checked + .checkbox-icon {
@@ -856,6 +868,7 @@ fill: var(--primary-white-color);
 
 .footer-field:focus {
   border-color: var(--accent-color);
+  color:var(--primary-white-color)
 }
 
 .footer-button {
