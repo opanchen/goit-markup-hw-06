@@ -420,7 +420,7 @@ color: rgba(117, 117, 117, 0.5);
 
 }
 
-input[type="checkbox"]:focus + .checkbox-icon {
+input[type="checkbox"]:focus-visible + .checkbox-icon {
   border-color: var(--accent-color);
 }
 
